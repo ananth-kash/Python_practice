@@ -1,0 +1,15 @@
+a=[0,2,1,1,0,2,2,0,2,1]
+low=0
+mid=0
+high=len(a)-1
+while(high>=mid):
+    if(a[mid]==2):
+        a[mid],a[high]=a[high],a[mid]
+        high-=1
+    elif(a[mid]==1):
+        mid+=1
+    elif(a[mid]==0):
+        a[mid],a[low]=a[low],a[mid]
+        mid+=1
+        low+=1
+print(a)
